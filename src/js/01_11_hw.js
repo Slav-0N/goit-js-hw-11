@@ -137,10 +137,7 @@ function listRendering(obj) {
       gallery.insertAdjacentHTML("beforeend", gallaryArr);
 }
 
-setTimeout(() => {
-  const ddd = gallery.firstElementChild;
-  ddd.classList.add("pipka");
-}, 1000);
+
 
 
 
