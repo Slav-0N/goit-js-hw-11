@@ -1,16 +1,16 @@
-.gallery {
-  list-style: none;
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
 }
+
+
 
 
 .is-hidden {
   display: none;
 }
 
-:root {
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --animation-duration: 250ms;
-}
+
 
 .gallery {
   display: grid;
@@ -77,5 +77,15 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+}
+.form-wrap {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+}
+
+.btn-wrap {
+  display: flex;
+    justify-content: center;
 }
 
