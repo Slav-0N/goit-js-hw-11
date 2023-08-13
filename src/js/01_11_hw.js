@@ -4,19 +4,12 @@ import Notiflix from 'notiflix';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-Notiflix.Notify.init({
-  width: '600px',
-  position: 'right-top',
-  distance: '10px',
-  opacity: 1,
-});
-
 
 const form = document.querySelector('.search-form');
 const gallery = document.querySelector('.gallery');
 const loadMore = document.querySelector('.load-more');
 let page = 1;
-let per_page = 40;
+let per_page = 100;
 let totalFaund = per_page;
 
 const fetchListItems = async (searchText) => {
@@ -31,6 +24,11 @@ function onSubmit(event) {
   event.preventDefault();
   ifNewSubmit()
   const searchText = event.currentTarget.firstElementChild.value;
+  
+  if (searchText.trim() === "") {
+    return Notiflix.Notify.failure(`Please, enter your query in the search box!`);
+    
+  }
 
   fetchListItems(searchText)
     .then(response => {
