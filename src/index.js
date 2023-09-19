@@ -34,7 +34,7 @@ function onSubmit(event) {
       const totalPages = Math.ceil(totalHitsElements / per_page);
       console.log("page:", page);
       console.log("totalPage:", totalPages);
-
+      // Slav
       if (totalHitsElements >= per_page) {
         Notiflix.Notify.success(`Hooray! We found ${per_page} out of ${totalHitsElements} images.`);
       } else if (totalHitsElements > 0){
